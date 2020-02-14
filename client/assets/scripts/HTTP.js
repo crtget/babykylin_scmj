@@ -1,5 +1,5 @@
 
-var URL = "http://127.0.0.1:9000";
+var URL = "http://certer.vicp.net:9900";
 
 exports.master_url = null;
 exports.url = null;

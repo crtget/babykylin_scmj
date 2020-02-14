@@ -1,4 +1,4 @@
-﻿var HALL_IP = "127.0.0.1";
+﻿var HALL_IP = "192.168.1.8";
 var HALL_CLIENT_PORT = 9001;
 var HALL_ROOM_PORT = 9002;
 
@@ -11,8 +11,8 @@ exports.mysql = function(){
 	return {
 		HOST:'127.0.0.1',
 		USER:'root',
-		PSWD:'',
-		DB:'db_babykylin',
+		PSWD:'1307761750',
+		DB:'mj',
 		PORT:3306,
 	}
 }
@@ -28,7 +28,7 @@ exports.account_server = function(){
 		//
 		DEALDER_API_IP:LOCAL_IP,
 		DEALDER_API_PORT:12581,
-		VERSION:'20161227',
+		VERSION:'2020021401',
 		APP_WEB:'http://fir.im/2f17',
 	};
 };

@@ -213,7 +213,7 @@ cc.Class({
     },
     
     onBtnTaobaoClicked:function(){
-        cc.sys.openURL('https://shop596732896.taobao.com/');
+        //cc.sys.openURL('https://shop596732896.taobao.com/');
     },
 
     // called every frame, uncomment this function to activate update callback

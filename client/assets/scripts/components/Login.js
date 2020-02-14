@@ -60,8 +60,10 @@ cc.Class({
             cc.find("Canvas/btn_weixin").active = false;
         }
         else{
-            cc.find("Canvas/btn_yk").active = false;
-            cc.find("Canvas/btn_weixin").active = true;
+			cc.find("Canvas/btn_yk").active = true;
+			cc.find("Canvas/btn_weixin").active = false;
+            //cc.find("Canvas/btn_yk").active = false;
+            //cc.find("Canvas/btn_weixin").active = true;
         }
     },
     

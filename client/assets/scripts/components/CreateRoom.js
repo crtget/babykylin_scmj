@@ -36,7 +36,7 @@ cc.Class({
     },
 
     onBtnOK: function () {
-        var usedTypes = ['xzdd', 'xlch'];
+        var usedTypes = ['sjz', 'sjz'];
         var type = this.getType();
         if (usedTypes.indexOf(type) == -1) {
             return;
@@ -55,16 +55,16 @@ cc.Class({
             }
         }
         if (type == 0) {
-            return 'xzdd';
+            return 'sjz';
         }
         else if (type == 1) {
-            return 'xlch';
+            return 'sjz';
         }
-        return 'xzdd';
+        return 'sjz';
     },
 
     getSelectedOfRadioGroup(groupRoot) {
-        console.log(groupRoot);
+        console.log("=================================", groupRoot);
         var t = this._currentGame.getChildByName(groupRoot);
 
         var arr = [];
@@ -91,7 +91,7 @@ cc.Class({
                 cc.vv.wc.hide();
                 //console.log(ret.errmsg);
                 if (ret.errcode == 2222) {
-                    cc.vv.alert.show("提示", "钻石不足，创建房间失败!");
+                    cc.vv.alert.show("提示", "房卡不足，创建房间失败!");
                 }
                 else {
                     cc.vv.alert.show("提示", "创建房间失败,错误码:" + ret.errcode);
@@ -104,10 +104,10 @@ cc.Class({
 
         var type = this.getType();
         var conf = null;
-        if (type == 'xzdd') {
+        if (type == 'sjz') {
             conf = this.constructSCMJConf();
         }
-        else if (type == 'xlch') {
+        else if (type == 'sjz') {
             conf = this.constructSCMJConf();
         }
         conf.type = type;
@@ -115,6 +115,7 @@ cc.Class({
         var data = {
             account: cc.vv.userMgr.account,
             sign: cc.vv.userMgr.sign,
+			gems: cc.vv.userMgr.gems,
             conf: JSON.stringify(conf)
         };
         console.log(data);
@@ -123,29 +124,30 @@ cc.Class({
     },
 
     constructSCMJConf: function () {
-
+        
         var wanfaxuanze = this._currentGame.getChildByName('wanfaxuanze');
-        var huansanzhang = wanfaxuanze.children[0].getComponent('CheckBox').checked;
-        var jiangdui = wanfaxuanze.children[1].getComponent('CheckBox').checked;
-        var menqing = wanfaxuanze.children[2].getComponent('CheckBox').checked;
-        var tiandihu = wanfaxuanze.children[3].getComponent('CheckBox').checked;
+        var feng = wanfaxuanze.children[0].getComponent('CheckBox').checked  == true ? 1 : 0;
+        var qidui = wanfaxuanze.children[1].getComponent('CheckBox').checked  == true ? 1 : 0;
+        var qingyise = wanfaxuanze.children[2].getComponent('CheckBox').checked  == true ? 1 : 0;
+        var liuzhuang = wanfaxuanze.children[3].getComponent('CheckBox').checked  == true ? 1 : 0;
 
-        var difen = this.getSelectedOfRadioGroup('difenxuanze');
-        var zimo = this.getSelectedOfRadioGroup('zimojiacheng');
-        var zuidafanshu = this.getSelectedOfRadioGroup('zuidafanshu');
+        
+
+        var kouzuan = this.getSelectedOfRadioGroup('kouzuan');
+        var renshuxuanze = this.getSelectedOfRadioGroup('renshuxuanze');
         var jushuxuanze = this.getSelectedOfRadioGroup('xuanzejushu');
-        var dianganghua = this.getSelectedOfRadioGroup('dianganghua');
+
+        
+
         
         var conf = {
-            difen:difen,
-            zimo:zimo,
-            jiangdui:jiangdui,
-            huansanzhang:huansanzhang,
-            zuidafanshu:zuidafanshu,
+            kouzuan:kouzuan,
+            qidui:qidui,
+            feng:feng,
+            renshuxuanze:renshuxuanze,
             jushuxuanze:jushuxuanze,
-            dianganghua:dianganghua,
-            menqing:menqing,
-            tiandihu:tiandihu,   
+            qingyise:qingyise,
+            liuzhuang:liuzhuang,   
         };
         return conf;
     },
@@ -155,6 +157,7 @@ cc.Class({
     update: function (dt) {
 
         var type = this.getType();
+
         if (this.lastType != type) {
             this.lastType = type;
             for (var i = 0; i < this._gamelist.childrenCount; ++i) {

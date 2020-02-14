@@ -6,262 +6,319 @@
         <dict>
             <key>creatroom1.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{196,10},{192,68}}</string>
-                <key>offset</key>
-                <string>{0,9}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{192,68}}</string>
-                <key>sourceSize</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
                 <string>{192,86}</string>
+                <key>spriteSourceSize</key>
+                <string>{192,86}</string>
+                <key>textureRect</key>
+                <string>{{1236,40},{192,86}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom10.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{891,10},{165,46}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{165,46}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{165,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{165,46}</string>
+                <key>textureRect</key>
+                <string>{{248,40},{165,46}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom11.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{1016,58},{82,40}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{82,40}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{82,40}</string>
+                <key>spriteSourceSize</key>
+                <string>{82,40}</string>
+                <key>textureRect</key>
+                <string>{{1322,0},{82,40}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom12.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{932,58},{82,40}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{82,40}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{82,40}</string>
+                <key>spriteSourceSize</key>
+                <string>{82,40}</string>
+                <key>textureRect</key>
+                <string>{{1404,0},{82,40}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom13.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{724,10},{165,46}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{165,46}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{165,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{165,46}</string>
+                <key>textureRect</key>
+                <string>{{413,40},{165,46}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom14.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{390,58},{163,46}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{163,46}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{163,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{163,46}</string>
+                <key>textureRect</key>
+                <string>{{578,40},{163,46}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom15.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{848,58},{82,40}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{82,40}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{82,40}</string>
+                <key>spriteSourceSize</key>
+                <string>{82,40}</string>
+                <key>textureRect</key>
+                <string>{{1486,0},{82,40}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom16.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{557,10},{165,46}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{165,46}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{165,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{165,46}</string>
+                <key>textureRect</key>
+                <string>{{741,40},{165,46}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom17.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{390,10},{165,46}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{165,46}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{165,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{165,46}</string>
+                <key>textureRect</key>
+                <string>{{906,40},{165,46}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom18.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{2,2},{1129,6}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{1129,6}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{1129,6}</string>
+                <key>spriteSourceSize</key>
+                <string>{1129,6}</string>
+                <key>textureRect</key>
+                <string>{{0,0},{1129,6}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom19.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{196,80},{82,38}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{82,38}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{82,38}</string>
+                <key>spriteSourceSize</key>
+                <string>{82,38}</string>
+                <key>textureRect</key>
+                <string>{{1201,0},{82,38}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom2.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{2,10},{192,86}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{192,86}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{192,86}</string>
+                <key>spriteSourceSize</key>
+                <string>{192,86}</string>
+                <key>textureRect</key>
+                <string>{{1428,40},{192,86}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>creatroom20.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{165,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{165,46}</string>
+                <key>textureRect</key>
+                <string>{{1071,40},{165,46}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom3.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{1058,10},{43,43}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{43,43}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{43,43}</string>
+                <key>spriteSourceSize</key>
+                <string>{43,43}</string>
+                <key>textureRect</key>
+                <string>{{205,40},{43,43}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom4.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{280,80},{39,39}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{39,39}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{39,39}</string>
+                <key>spriteSourceSize</key>
+                <string>{39,39}</string>
+                <key>textureRect</key>
+                <string>{{1283,0},{39,39}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom5.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{321,80},{35,35}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{35,35}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{35,35}</string>
+                <key>spriteSourceSize</key>
+                <string>{35,35}</string>
+                <key>textureRect</key>
+                <string>{{1166,0},{35,35}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom6.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{358,80},{37,30}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{37,30}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{37,30}</string>
+                <key>spriteSourceSize</key>
+                <string>{37,30}</string>
+                <key>textureRect</key>
+                <string>{{1129,0},{37,30}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom7.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{555,58},{123,42}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{123,42}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{123,42}</string>
+                <key>spriteSourceSize</key>
+                <string>{123,42}</string>
+                <key>textureRect</key>
+                <string>{{82,40},{123,42}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom8.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{764,58},{82,40}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{82,40}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{82,40}</string>
+                <key>spriteSourceSize</key>
+                <string>{82,40}</string>
+                <key>textureRect</key>
+                <string>{{1568,0},{82,40}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
             <key>creatroom9.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{680,58},{82,40}}</string>
-                <key>offset</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
                 <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{82,40}}</string>
-                <key>sourceSize</key>
+                <key>spriteSize</key>
                 <string>{82,40}</string>
+                <key>spriteSourceSize</key>
+                <string>{82,40}</string>
+                <key>textureRect</key>
+                <string>{{0,40},{82,40}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
         </dict>
         <key>metadata</key>
         <dict>
             <key>format</key>
-            <integer>2</integer>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
             <key>realTextureFileName</key>
             <string>createroom.png</string>
             <key>size</key>
-            <string>{1133,121}</string>
+            <string>{1650,126}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:40cc9360b61f37d195edcaf735eab404:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:2d7abe6bca639c7431174f226158cbe5:105b4dc29ccea2ae4a0c5fb5439ed363:76a581923ee836fba103561bc2233229$</string>
             <key>textureFileName</key>
             <string>createroom.png</string>
         </dict>

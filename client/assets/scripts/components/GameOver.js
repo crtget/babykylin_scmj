@@ -28,7 +28,7 @@ cc.Class({
         if(cc.vv.gameNetMgr.conf == null){
             return;
         }
-        if(cc.vv.gameNetMgr.conf.type == "xzdd"){
+        if(cc.vv.gameNetMgr.conf.type == "sjz"){
             this._gameover = this.node.getChildByName("game_over");
         }
         else{
@@ -76,7 +76,7 @@ cc.Class({
     },
     
     onGameOver(data){
-        if(cc.vv.gameNetMgr.conf.type == "xzdd"){
+        if(cc.vv.gameNetMgr.conf.type == "sjz"){
             this.onGameOver_XZDD(data);
         }
         else{

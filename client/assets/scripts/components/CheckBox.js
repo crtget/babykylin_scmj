@@ -19,6 +19,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        this.checked = true;
         this.refresh();
     },
     

@@ -45,6 +45,18 @@ cc.Class({
         }
         
         var power = this._status.getChildByName('power');
-        power.scaleX = cc.vv.anysdkMgr.getBatteryPercent();
+		
+		var p =  0.9;
+		 if(cc.sys.isNative){
+            if(cc.sys.os == cc.sys.OS_ANDROID){
+                p = jsb.reflection.callStaticMethod(this.ANDROID_API, "getBatteryPercent", "()F");
+            }
+            else if(cc.sys.os == cc.sys.OS_IOS){
+                p = jsb.reflection.callStaticMethod(this.IOS_API, "getBatteryPercent");
+            }            
+        }
+        
+		
+        power.scaleX = p;
     },
 });

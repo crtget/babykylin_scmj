@@ -36,9 +36,9 @@ function initMgr(){
     cc.vv.gameNetMgr = new GameNetMgr();
     cc.vv.gameNetMgr.initHandlers();
     
-    var AnysdkMgr = require("AnysdkMgr");
-    cc.vv.anysdkMgr = new AnysdkMgr();
-    cc.vv.anysdkMgr.init();
+    //var AnysdkMgr = require("AnysdkMgr");
+    //cc.vv.anysdkMgr = new AnysdkMgr();
+    //cc.vv.anysdkMgr.init();
     
     var VoiceMgr = require("VoiceMgr");
     cc.vv.voiceMgr = new VoiceMgr();
@@ -85,7 +85,6 @@ cc.Class({
     onLoad: function () {
         initMgr();
         cc.vv.utils.setFitSreenMode();
-        console.log('haha'); 
         this._mainScene = 'loading';
         this.showSplash(function(){
             this.getServerInfo();
@@ -137,10 +136,14 @@ cc.Class({
         var self = this;
         var onGetVersion = function(ret){
             cc.vv.SI = ret;
+
+
             if(cc.sys.isNative){
-                var url = cc.url.raw('resources/ver/cv.txt');
-                cc.loader.load(url,function(err,data){
-                    cc.VERSION = data;
+
+                cc.loader.loadRes('ver/cv', function(err, data){
+
+                    cc.VERSION = data.text;
+
                     if(ret.version == null){
                         console.log("error.");
                     }

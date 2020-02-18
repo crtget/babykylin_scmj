@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.4812499999999999,
-      "y": 0.4812499999999999,
+      "x": 0.48125,
+      "y": 0.48125,
       "z": 1
     },
     "_quat": {
@@ -148,7 +148,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2641
@@ -89717,7 +89717,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 90,
+      "width": 150,
       "height": 40
     },
     "_anchorPoint": {
@@ -89763,8 +89763,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "自摸：",
-    "_N$string": "自摸：",
+    "_string": "胡牌次数：",
+    "_N$string": "胡牌次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -89849,8 +89849,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "接炮次数：",
-    "_N$string": "接炮次数：",
+    "_string": "自摸次数：",
+    "_N$string": "自摸次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -90129,7 +90129,7 @@
       "__id__": 2008
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -90209,7 +90209,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "zimocishu",
+    "_name": "hupaicishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1981
@@ -90295,7 +90295,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "jiepaocishu",
+    "_name": "zimocishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1981
@@ -90645,7 +90645,7 @@
       "__id__": 1981
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -92059,8 +92059,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "自摸次数：",
-    "_N$string": "自摸次数：",
+    "_string": "胡牌次数：",
+    "_N$string": "胡牌次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -92145,8 +92145,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "接炮次数：",
-    "_N$string": "接炮次数：",
+    "_string": "自摸次数：",
+    "_N$string": "自摸次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -92425,7 +92425,7 @@
       "__id__": 2061
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -92505,7 +92505,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "zimocishu",
+    "_name": "hupaicishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2034
@@ -92591,7 +92591,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "jiepaocishu",
+    "_name": "zimocishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2034
@@ -92941,7 +92941,7 @@
       "__id__": 2034
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -94355,8 +94355,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "自摸次数：",
-    "_N$string": "自摸次数：",
+    "_string": "胡牌次数：",
+    "_N$string": "胡牌次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -94441,8 +94441,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "接炮次数：",
-    "_N$string": "接炮次数：",
+    "_string": "自摸次数：",
+    "_N$string": "自摸次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -94721,7 +94721,7 @@
       "__id__": 2114
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -94801,7 +94801,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "zimocishu",
+    "_name": "hupaicishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2087
@@ -94887,7 +94887,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "jiepaocishu",
+    "_name": "zimocishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2087
@@ -95237,7 +95237,7 @@
       "__id__": 2087
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -96651,8 +96651,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "自摸次数：",
-    "_N$string": "自摸次数：",
+    "_string": "胡牌次数：",
+    "_N$string": "胡牌次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -96737,8 +96737,8 @@
     "_srcBlendFactor": 1,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "接炮次数：",
-    "_N$string": "接炮次数：",
+    "_string": "自摸次数：",
+    "_N$string": "自摸次数：",
     "_fontSize": 30,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -97017,7 +97017,7 @@
       "__id__": 2167
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -97097,7 +97097,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "zimocishu",
+    "_name": "hupaicishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2140
@@ -97183,7 +97183,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "jiepaocishu",
+    "_name": "zimocishu",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2140
@@ -97533,7 +97533,7 @@
       "__id__": 2140
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [
       {
@@ -116514,7 +116514,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2651

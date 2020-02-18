@@ -1,10 +1,10 @@
 ﻿//var HALL_IP = "gameip.wanyuenet.cn";
-var HALL_IP = "192.168.1.8";
+var HALL_IP = "certer.vicp.net";
 var HALL_CLIENT_PORT = 9901;
 var HALL_ROOM_PORT = 9902;
 
-var ACCOUNT_PRI_KEY = "^&*#$%()@";
-var ROOM_PRI_KEY = "~!@#$(*&^%$&";
+var ACCOUNT_PRI_KEY = "C4A09632FEACBAA8DC74C1A7457C3D922AE8C4CD";
+var ROOM_PRI_KEY = "83C0DF2E912ED50C7D798A64805ED6EC";
 
 var LOCAL_IP = 'localhost';
 

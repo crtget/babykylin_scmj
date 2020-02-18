@@ -190,8 +190,9 @@ app.get('/create_private_room', function (req, res) {
 		return;
 	}
 
-	var account = data.account;
+	console.log("client_service====================", data.type);
 
+	var account = data.account;
 	data.account = null;
 	data.sign = null;
 	var conf = data.conf;
@@ -211,6 +212,8 @@ app.get('/create_private_room', function (req, res) {
 				http.send(res, -1, "user is playing in room now.");
 				return;
 			}
+
+			
 			//创建房间
 			room_service.createRoom(account, userId, conf, type, function (err, roomId) {
 				

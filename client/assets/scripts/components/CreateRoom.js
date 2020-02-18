@@ -37,7 +37,7 @@ cc.Class({
 
     onBtnOK: function () {
         var usedTypes = ['sjz', 'sjz'];
-        var type = this.getType();
+        var type = this.getType()[1];
         if (usedTypes.indexOf(type) == -1) {
             return;
         }
@@ -54,13 +54,20 @@ cc.Class({
                 break;
             }
         }
-        if (type == 0) {
-            return 'sjz';
+
+        var typename = "sjz";
+
+        switch(type){
+            case 0:
+                typename = 'sjz';
+                break;
+            case 1:
+                typename = 'sjz';
+                break;      
         }
-        else if (type == 1) {
-            return 'sjz';
-        }
-        return 'sjz';
+
+        return new Array(type + 1, typename);
+        
     },
 
     getSelectedOfRadioGroup(groupRoot) {
@@ -104,16 +111,16 @@ cc.Class({
 
         var type = this.getType();
         var conf = null;
-        if (type == 'sjz') {
-            conf = this.constructSCMJConf();
+
+        if (type[1] == 'sjz') {
+            conf = this.constructSJZMJConf();
         }
-        else if (type == 'sjz') {
-            conf = this.constructSCMJConf();
-        }
-        conf.type = type;
+
+        conf.type = type[1];
 
         var data = {
             account: cc.vv.userMgr.account,
+            type: type[0],
             sign: cc.vv.userMgr.sign,
 			gems: cc.vv.userMgr.gems,
             conf: JSON.stringify(conf)
@@ -123,7 +130,7 @@ cc.Class({
         cc.vv.http.sendRequest("/create_private_room", data, onCreate);
     },
 
-    constructSCMJConf: function () {
+    constructSJZMJConf: function () {
         
         var wanfaxuanze = this._currentGame.getChildByName('wanfaxuanze');
         var feng = wanfaxuanze.children[0].getComponent('CheckBox').checked  == true ? 1 : 0;
@@ -157,7 +164,8 @@ cc.Class({
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
 
-        var type = this.getType();
+        var type = this.getType()[1];
+
 
         if (this.lastType != type) {
             this.lastType = type;

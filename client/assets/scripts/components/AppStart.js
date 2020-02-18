@@ -84,11 +84,16 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         initMgr();
+        
         cc.vv.utils.setFitSreenMode();
         this._mainScene = 'loading';
+        
+        this.getServerInfo();
+        /*
         this.showSplash(function(){
             this.getServerInfo();
         }.bind(this));
+        */
     },
 
     onBtnDownloadClicked:function(){

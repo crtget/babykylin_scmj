@@ -128,6 +128,9 @@ cc.Class({
         else if(id >= 18 && id < 27){
             realId = id - 7;
         }
+        else if(id >= 27 && id < 34){
+            realId = id + 4;
+        }
         return "nv/" + realId + ".mp3";
     },
     

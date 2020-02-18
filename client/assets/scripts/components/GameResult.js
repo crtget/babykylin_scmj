@@ -46,9 +46,15 @@ cc.Class({
     
     showResult:function(seat,info,isZuiJiaPaoShou){
 
-        cc.log("asdjklsadkljdaskljkljdsalkj0--=================================================", JSON.stringify(info));
+        
 
         seat.node.getChildByName("zuijiapaoshou").active = isZuiJiaPaoShou;
+        seat.node.getChildByName("hupaicishu").getComponent(cc.Label).string = info.numHu;
+        seat.node.getChildByName("zimocishu").getComponent(cc.Label).string = info.zimoNum;
+        seat.node.getChildByName("dianpaocishu").getComponent(cc.Label).string = info.fangpaoNum;
+        seat.node.getChildByName("minggangcishu").getComponent(cc.Label).string = info.minggangNum;
+        seat.node.getChildByName("angangcishu").getComponent(cc.Label).string = info.angangNum;
+
 
         /*四川麻将
         

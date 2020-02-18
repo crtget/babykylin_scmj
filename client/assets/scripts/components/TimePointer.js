@@ -20,6 +20,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        var turntime = 30;
+        var alrttime = 3;
         var gameChild = this.node.getChildByName("game");
         this._arrow = gameChild.getChildByName("arrow");
         this._pointer = this._arrow.getChildByName("pointer");
@@ -32,12 +34,14 @@ cc.Class({
         
         this.node.on('game_begin',function(data){
             self.initPointer();
+            self._time = turntime;
+            self._alertTime = alrttime;
         });
         
         this.node.on('game_chupai',function(data){
             self.initPointer();
-            self._time = 30;
-            self._alertTime = 3;
+            self._time = turntime;
+            self._alertTime = alrttime;
         });
     }, 
     
@@ -46,13 +50,13 @@ cc.Class({
             return;
         }
 
-        this._arrow.active = cc.vv.gameNetMgr.gamestate == "playing";
+        this._arrow.active = cc.vv.gameNetMgr.gamestate == "playing" || cc.vv.gameNetMgr.gamestate == "begin";
         
         if(!this._arrow.active){
             return;
         }
 
-        cc.log("=============================================playing");
+        
         var turn = cc.vv.gameNetMgr.turn;
         var localIndex = cc.vv.gameNetMgr.getLocalIndex(turn);
         for(var i = 0; i < this._pointer.children.length; ++i){

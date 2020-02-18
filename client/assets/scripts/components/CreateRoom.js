@@ -64,7 +64,7 @@ cc.Class({
     },
 
     getSelectedOfRadioGroup(groupRoot) {
-        console.log("=================================", groupRoot);
+
         var t = this._currentGame.getChildByName(groupRoot);
 
         var arr = [];
@@ -134,7 +134,8 @@ cc.Class({
         
 
         var kouzuan = this.getSelectedOfRadioGroup('kouzuan');
-        var renshuxuanze = this.getSelectedOfRadioGroup('renshuxuanze');
+        //var renshuxuanze = this.getSelectedOfRadioGroup('renshuxuanze');
+        var renshuxuanze = 1;
         var jushuxuanze = this.getSelectedOfRadioGroup('xuanzejushu');
 
         

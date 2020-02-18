@@ -1,3 +1,5 @@
+import { isRegExp } from "util";
+
 function loadImage(url,code,callback){
     /*
     if(cc.vv.images == null){
@@ -30,6 +32,11 @@ function loadImage(url,code,callback){
         imageInfo.queue.push({code:code,callback:callback});
     }*/
     cc.loader.load(url,function (err,tex) {
+
+        if (err){
+            return;
+        }
+
         var spriteFrame = new cc.SpriteFrame(tex, cc.Rect(0, 0, tex.width, tex.height));
         callback(code,spriteFrame);
     });
@@ -91,7 +98,7 @@ cc.Class({
         
         var self = this;
         getBaseInfo(userid,function(code,info){
-           if(info && info.url){
+           if(info && info.url.indexOf("null.jpg") < 0){
                 loadImage(info.url,userid,function (err,spriteFrame) {
                     self._spriteFrame = spriteFrame;
                     self.setupSpriteFrame();

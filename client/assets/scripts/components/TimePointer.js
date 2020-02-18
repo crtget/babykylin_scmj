@@ -36,7 +36,7 @@ cc.Class({
         
         this.node.on('game_chupai',function(data){
             self.initPointer();
-            self._time = 10;
+            self._time = 30;
             self._alertTime = 3;
         });
     }, 
@@ -45,10 +45,14 @@ cc.Class({
         if(cc.vv == null){
             return;
         }
+
         this._arrow.active = cc.vv.gameNetMgr.gamestate == "playing";
+        
         if(!this._arrow.active){
             return;
         }
+
+        cc.log("=============================================playing");
         var turn = cc.vv.gameNetMgr.turn;
         var localIndex = cc.vv.gameNetMgr.getLocalIndex(turn);
         for(var i = 0; i < this._pointer.children.length; ++i){

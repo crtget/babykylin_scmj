@@ -7,7 +7,8 @@ cc.Class({
 		lv:0,
 		exp:0,
 		coins:0,
-		gems:0,
+        gems:0,
+        lucky:0,
 		sign:0,
         ip:"",
         sex:0,
@@ -62,7 +63,8 @@ cc.Class({
         			self.lv = ret.lv;
         			self.exp = ret.exp;
         			self.coins = ret.coins;
-        			self.gems = ret.gems;
+                    self.gems = ret.gems;
+                    self.lucky = ret.lucky;
                     self.roomData = ret.roomid;
                     self.sex = ret.sex;
                     self.ip = ret.ip;

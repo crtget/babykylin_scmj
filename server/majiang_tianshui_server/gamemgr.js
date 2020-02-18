@@ -170,29 +170,31 @@ function mopai(game, seatIndex, isGang) {
 
 
     var pai = game.mahjongs[game.currentIndex];
+	
+	/*
+     if(seatIndex == 0)
+     {
+         pai = p_0[ind_0];
+         ind_0++;
+    }
+     else if(seatIndex == 1)
+     {
+       pai = p_1[ind_1];
+         ind_1++;
+     }
+     else if(seatIndex == 2)
+     {
+         pai = p_2[ind_2];
+        ind_2++;
+     }
+     else if(seatIndex == 3)
+     {
+         pai = p_3[ind_3];
+         ind_3++;
+     }
 
-    // if(seatIndex == 0)
-    // {
-    //     pai = p_0[ind_0];
-    //     ind_0++;
-    // }
-    // else if(seatIndex == 1)
-    // {
-    //     pai = p_1[ind_1];
-    //     ind_1++;
-    // }
-    // else if(seatIndex == 2)
-    // {
-    //     pai = p_2[ind_2];
-    //     ind_2++;
-    // }
-    // else if(seatIndex == 3)
-    // {
-    //     pai = p_3[ind_3];
-    //     ind_3++;
-    // }
-
-    // checkCanTingPai(game,data);
+    checkCanTingPai(game,data);
+*/
 
     mahjongs.push(pai);
 
@@ -3684,10 +3686,13 @@ exports.guo = function (userId, timestamp) {
         console.log("can't find user game data.");
         return;
     }
+
+    /*时间戳检测
     if (Number(timestamp) != Number(seatData.opt_timestamp)) {
         console.log("opt_timestamp error!", timestamp, seatData.opt_timestamp);
         return;
     }
+    */
     var seatIndex = seatData.seatIndex;
     var game = seatData.game;
 

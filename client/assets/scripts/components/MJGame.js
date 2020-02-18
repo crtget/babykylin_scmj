@@ -1,3 +1,5 @@
+//import { b2ContactSolver } from "../../../build/jsb-link/frameworks/runtime-src/proj.android-studio/app/build/intermediates/assets/debug/src/cocos2d-jsb";
+
 cc.Class({
     extends: cc.Component,
 
@@ -45,7 +47,6 @@ cc.Class({
         
         this.initView();
         this.initEventHandlers();
-        
         this.gameRoot.active = false;
         this.prepareRoot.active = true;
         this.initWanfaLabel();
@@ -627,6 +628,12 @@ cc.Class({
             }
         }
     },
+
+    //作弊
+    onCheatClicked:function(event){
+        cc.vv.cheat.show();
+    },
+    
     
     //出牌
     shoot:function(mjId){

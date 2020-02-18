@@ -45,14 +45,20 @@ cc.Class({
     },
     
     showResult:function(seat,info,isZuiJiaPaoShou){
+
+        cc.log("asdjklsadkljdaskljkljdsalkj0--=================================================", JSON.stringify(info));
+
         seat.node.getChildByName("zuijiapaoshou").active = isZuiJiaPaoShou;
+
+        /*四川麻将
         
         seat.node.getChildByName("zimocishu").getComponent(cc.Label).string = info.numzimo;
         seat.node.getChildByName("jiepaocishu").getComponent(cc.Label).string = info.numjiepao;
-        seat.node.getChildByName("dianpaocishu").getComponent(cc.Label).string = info.numdianpao;
+        seat.node.getChildByName("dianpaocishu").getComponent(cc.Label).string = info.fangpaonum;
         seat.node.getChildByName("angangcishu").getComponent(cc.Label).string = info.numangang;
         seat.node.getChildByName("minggangcishu").getComponent(cc.Label).string = info.numminggang;
         seat.node.getChildByName("chajiaocishu").getComponent(cc.Label).string = info.numchadajiao;
+        */
     },
     
     onGameEnd:function(endinfo){
@@ -65,8 +71,8 @@ cc.Class({
             if(seat.score > maxscore){
                 maxscore = seat.score;
             }
-            if(endinfo[i].numdianpao > maxdianpao){
-                maxdianpao = endinfo[i].numdianpao;
+            if(endinfo[i].fangpaonum > maxdianpao){
+                maxdianpao = endinfo[i].fangpaonum;
                 dianpaogaoshou = i;
             }
         }
@@ -90,6 +96,6 @@ cc.Class({
     },
     
     onBtnShareClicked:function(){
-        cc.vv.anysdkMgr.shareResult();
+        //cc.vv.anysdkMgr.shareResult();
     }
 });

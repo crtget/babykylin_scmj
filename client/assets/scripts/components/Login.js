@@ -44,6 +44,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        
         cc.vv.utils.setFitSreenMode();
         cc.vv.http.url = cc.vv.http.master_url;
         cc.vv.net.addHandler('push_need_create_role',function(){
@@ -86,7 +87,7 @@ cc.Class({
     
     onBtnWeichatClicked:function(){
         var self = this;
-        cc.vv.anysdkMgr.login();
+        //cc.vv.anysdkMgr.login();
     },
     
     onBtnMIMAClicked:function(event){

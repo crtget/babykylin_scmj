@@ -30,9 +30,12 @@ cc.Class({
             return;
         }
         
+        
         this.initView();
         this.initSeats();
         this.initEventHandlers();
+        
+        
     },
     
     initView:function(){
@@ -71,6 +74,7 @@ cc.Class({
             if(type == null || type == ""){
                 type = "sjz";
             }
+
             
             titles.getChildByName(type).active = true;  
 
@@ -208,10 +212,11 @@ cc.Class({
         if(cc.vv.gameNetMgr.conf.type == "sjz"){
             var title = "<石家庄推倒胡>";
         }
-        cc.vv.anysdkMgr.share("天天麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
+        //cc.vv.anysdkMgr.share("天天麻将" + title,"房号:" + cc.vv.gameNetMgr.roomId + " 玩法:" + cc.vv.gameNetMgr.getWanfa());
     },
     
     onBtnDissolveClicked:function(){
+
         cc.vv.alert.show("解散房间","解散房间不扣房卡，是否确定解散？",function(){
             cc.vv.net.send("dispress");    
         },true);

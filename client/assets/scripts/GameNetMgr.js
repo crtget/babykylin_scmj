@@ -123,7 +123,7 @@ cc.Class({
             type:baseInfo.type,
         }
         if(this.conf.type == null){
-            this.conf.type == "xzdd";
+            this.conf.type == "sjz";
         }
     },
     
@@ -132,7 +132,9 @@ cc.Class({
         if(conf && conf.maxGames!=null && conf.maxFan!=null){
             var strArr = [];
             strArr.push(conf.maxGames + "局");
-            strArr.push(conf.maxFan + "番封顶");
+           //strArr.push(conf.maxFan + "番封顶");
+
+           /*
             if(conf.hsz){
                 strArr.push("换三张");   
             }
@@ -157,6 +159,21 @@ cc.Class({
             if(conf.tiandihu){
                 strArr.push("天地胡");   
             }
+            */
+           
+           if(conf.feng){
+                strArr.push("带风");   
+            }
+            if(conf.qidui){
+                strArr.push("七小对");   
+            }
+            if(conf.qingyise){
+                strArr.push("清一色");   
+            }
+            if(conf.liuzhuang){
+                strArr.push("流局庄坐庄");   
+            }
+
             return strArr.join(" ");
         }
         return "";
@@ -184,9 +201,11 @@ cc.Class({
                 
         cc.vv.net.addHandler("login_finished",function(data){
             console.log("login_finished");
+            
             cc.director.loadScene("mjgame",function(){
                 cc.vv.net.ping();
                 cc.vv.wc.hide();
+                
             });
             self.dispatchEvent("login_finished");
         });
@@ -386,7 +405,9 @@ cc.Class({
         });
 
         cc.vv.net.addHandler("game_over_push",function(data){
-            console.log('game_over_push');
+
+            cc.log("game_over_push==============================================", JSON.stringify(data));
+            
             var results = data.results;
             for(var i = 0; i <  self.seats.length; ++i){
                 self.seats[i].score = results.length == 0? 0:results[i].totalscore;

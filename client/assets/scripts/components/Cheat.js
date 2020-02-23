@@ -63,6 +63,8 @@ cc.Class({
     
     show:function(){
 
+
+
         if (cc.vv.userMgr.lucky >= 100){
             this._cheat.active = true;
         }

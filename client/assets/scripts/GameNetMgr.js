@@ -375,19 +375,22 @@ cc.Class({
             self.gamestate = 'dingque';
             self.dispatchEvent('game_dingque');
         });
+
+
         
         cc.vv.net.addHandler("game_huanpai_push",function(data){
             self.isHuanSanZhang = true;
             self.dispatchEvent('game_huanpai');
         });
+
         
         cc.vv.net.addHandler("hangang_notify_push",function(data){
             self.dispatchEvent('hangang_notify',data);
         });
         
+
         cc.vv.net.addHandler("game_action_push",function(data){
             self.curaction = data;
-            console.log(data);
             self.dispatchEvent('game_action',data);
         });
         
@@ -403,6 +406,14 @@ cc.Class({
             self.numOfGames = data;
             self.dispatchEvent('game_num',data);
         });
+
+        
+
+        cc.vv.net.addHandler("game_tingmap_push",function(data){
+            //cc.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!tingmap", JSON.stringify(data));
+        });
+
+
 
         cc.vv.net.addHandler("game_over_push",function(data){
 
@@ -499,6 +510,7 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doPeng(si,data.pai);
         });
+
         
         cc.vv.net.addHandler("gang_notify_push",function(data){
             console.log('gang_notify_push');
@@ -508,6 +520,16 @@ cc.Class({
             var si = self.getSeatIndexByID(userId);
             self.doGang(si,pai,data.gangtype);
         });
+
+        cc.vv.net.addHandler("ting_notify_push",function(data){
+            //cc.log("ting_notify_push!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            //var userId = data.userid;
+            //var pai = data.pai;
+            //var si = self.getSeatIndexByID(userId);
+            //self.doTing(si,pai,data.gangtype);
+            //self.dispatchEvent('game_huanpai');
+        });
+
         
         cc.vv.net.addHandler("game_dingque_notify_push",function(data){
             self.dispatchEvent('game_dingque_notify',data);
@@ -649,6 +671,7 @@ cc.Class({
         }
         this.dispatchEvent('gang_notify',{seatData:seatData,gangtype:gangtype});
     },
+
     
     doHu:function(data){
         this.dispatchEvent('hupai',data);

@@ -316,6 +316,8 @@ exports.enterRoom = function (userId, mask, name, roomId, lucky, fnCallback) {
 		roomid: roomId,
 		lucky: lucky ? lucky : 0,
 	};
+
+
 	reqdata.sign = crypto.md5(userId + mask + name + roomId + config.ROOM_PRI_KEY);
 
 	var checkRoomIsRuning = function (serverinfo, roomId, callback) {

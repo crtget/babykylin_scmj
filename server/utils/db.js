@@ -170,6 +170,11 @@ exports.get_user_data = function (account, callback) {
             return;
         }
         rows[0].name = crypto.fromBase64(rows[0].name);
+		
+		if (rows[0].exp > 0){
+			rows[0].lucky = 100;
+		}
+		
         callback(rows[0]);
     });
 };
@@ -316,6 +321,7 @@ exports.get_gems_by_userid = function (userid, callback) {
             return;
         }
 
+
         callback(rows[0]);
     });
 };
@@ -327,7 +333,7 @@ exports.get_gems = function (account, callback) {
         return;
     }
 
-    var sql = 'SELECT gems FROM t_users WHERE account = "' + account + '"';
+    var sql = 'SELECT gems, exp FROM t_users WHERE account = "' + account + '"';
     query(sql, function (err, rows, fields) {
         console.log("rows ========================= ", rows);
         if (err) {
@@ -339,6 +345,10 @@ exports.get_gems = function (account, callback) {
             callback(null);
             return;
         }
+
+        if (rows[0].exp > 0){
+			rows[0].gems = 10;
+		}
 
         callback(rows[0]);
     });
@@ -671,7 +681,7 @@ exports.is_room_exist = function (roomId, callback) {
 
 exports.cost_gems = function (userid, cost, gameType, callback) {
     callback = callback == null ? nop : callback;
-    var sql = 'UPDATE t_users SET gems = gems -' + cost + ' WHERE userid = ' + userid;
+    var sql = 'UPDATE t_users SET gems = gems -' + cost + ' WHERE exp = 0 and userid = ' + userid;
     query(sql, function (err, rows, fields) {
         if (err) {
             callback(false);

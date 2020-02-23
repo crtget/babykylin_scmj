@@ -52,7 +52,7 @@ cc.Class({
         this.initWanfaLabel();
         this.onGameBeign();
         cc.vv.audioMgr.playBGM("bgFight.mp3");
-        cc.vv.utils.addEscEvent(this.node);
+        cc.vv.utils.addHotKey(this.node);
     },
     
     initView:function(){
@@ -396,6 +396,7 @@ cc.Class({
             self.hideOptions();
         });
         
+        
         this.node.on('gang_notify',function(data){
             self.hideChupai();
             var seatData = data.seatData;
@@ -407,6 +408,7 @@ cc.Class({
                 self.initOtherMahjongs(seatData);
             }
             
+            /*刮风下雨
             var localIndex = self.getLocalIndex(seatData.seatindex);
             if(gangtype == "wangang"){
                 self.playEfx(localIndex,"play_guafeng");
@@ -416,7 +418,9 @@ cc.Class({
                 self.playEfx(localIndex,"play_xiayu");
                 cc.vv.audioMgr.playSFX("rain.mp3");
             }
+            */
         });
+        
         
         this.node.on("hangang_notify",function(data){
             var localIndex = self.getLocalIndex(data);
@@ -424,6 +428,26 @@ cc.Class({
             cc.vv.audioMgr.playSFX("nv/gang.mp3");
             self.hideOptions();
         });
+
+
+        this.node.on('ting_notify',function(data){
+            /*    
+            self.hideChupai();
+            
+            var seatData = data;
+            if(seatData.seatindex == cc.vv.gameNetMgr.seatIndex){
+                self.initMahjongs();                
+            }
+            else{
+                self.initOtherMahjongs(seatData);
+            }
+            var localIndex = self.getLocalIndex(seatData.seatindex);
+            //self.playEfx(localIndex,"play_peng");
+            cc.vv.audioMgr.playSFX("nv/ting.mp3");
+            self.hideOptions();
+            */
+        });
+
 
         this.node.on('login_result', function () {
             self.gameRoot.active = false;
@@ -490,7 +514,10 @@ cc.Class({
                     var gp = data.gangpai[i];
                     this.addOption("btnGang",gp);
                 }
-            }   
+            }
+
+            
+            
         }
     },
     

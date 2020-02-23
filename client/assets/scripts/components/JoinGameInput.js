@@ -28,19 +28,55 @@ cc.Class({
     },
     
     onInputFinished:function(roomId){
-        cc.vv.userMgr.enterRoom(roomId,function(ret){
-            if(ret.errcode == 0){
-                this.node.active = false;
-            }
-            else{
-                var content = "房间["+ roomId +"]不存在，请重新输入!";
-                if(ret.errcode == 4){
-                    content = "房间["+ roomId + "]已满!";
+
+
+
+        
+        if (cc.find("Canvas/JoinGame/JoinTitle").active)
+        {
+            cc.vv.userMgr.enterRoom(roomId,function(ret){
+                if(ret.errcode == 0){
+                    this.node.active = false;
                 }
-                cc.vv.alert.show("提示",content);
-                this.onResetClicked();
-            }
-        }.bind(this)); 
+                else{
+                    var content = "房间["+ roomId +"]不存在，请重新输入!";
+                    if(ret.errcode == 4){
+                        content = "房间["+ roomId + "]已满!";
+                    }
+                    cc.vv.alert.show("提示",content);
+                    this.onResetClicked();
+                }
+            }.bind(this)); 
+        }
+        else
+        {
+
+            var data = {
+                account:cc.vv.userMgr.account,
+                userid:cc.vv.userMgr.userId,
+                pcode:roomId,
+                sign:cc.vv.userMgr.sign
+            };
+    
+            cc.vv.http.sendRequest("/bind_dealer", data, function(ret){
+            
+                if (ret.errcode === 0){
+                    cc.vv.alert.show("提示", "您已成功绑定代理！");
+                    this.active = false;
+                }
+                else if (ret.errcode === 1){
+                    cc.vv.alert.show("提示", "您已经绑定过代理！");
+                    this.active = false;
+                }
+                else if (ret.errcode === 2){
+                    cc.vv.alert.show("提示", "错误的代理编号！");
+                    this.onResetClicked();
+                }
+    
+            }.bind(this));
+        }
+
+
     },
     
     onInput:function(num){

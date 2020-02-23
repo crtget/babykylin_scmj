@@ -68,6 +68,7 @@ app.get('/get_version', function (req, res) {
 	var ret = {
 		version: config.VERSION,
 	}
+
 	send(res, ret);
 });
 
@@ -93,6 +94,7 @@ app.get('/guest', function (req, res) {
 		halladdr: hallAddr,
 		sign: sign
 	}
+	
 	send(res, ret);
 });
 

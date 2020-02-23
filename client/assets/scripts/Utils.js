@@ -35,20 +35,30 @@ cc.Class({
         slideEvents.push(eventHandler);
     },
 
-    addEscEvent:function(node){
-        cc.eventManager.addListener({
-            event: cc.EventListener.KEYBOARD,
-            onKeyPressed:  function(keyCode, event){
-            },
-            onKeyReleased: function(keyCode, event){
-                if(keyCode == cc.KEY.back){
-                    cc.vv.alert.show('提示','确定要退出游戏吗？',function(){
-                        cc.game.end();
-                    },true);
-                }
-            }
-        }, node);
+    addHotKey: function(node) {
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, node);
+        //cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, node);
     },
+
+    onDestroy:function() {
+        cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        //cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
+    },
+
+
+    onKeyDown: function (event) {
+
+
+        if (event.keyCode == cc.macro.KEY.back)
+        {
+            cc.vv.alert.show('提示','确定要退出游戏吗？',function(){
+                cc.game.end();
+            },true);
+        }
+
+    },
+
+
 
     setFitSreenMode:function(){
         var node = cc.find('Canvas');

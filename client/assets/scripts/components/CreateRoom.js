@@ -21,6 +21,7 @@ cc.Class({
 
         this._gamelist = this.node.getChildByName('game_list');
 
+        /*
         this._leixingxuanze = [];
         var t = this.node.getChildByName("leixingxuanze");
         for (var i = 0; i < t.childrenCount; ++i) {
@@ -29,6 +30,7 @@ cc.Class({
                 this._leixingxuanze.push(n);
             }
         }
+        */
     },
 
     onBtnBack: function () {
@@ -48,12 +50,15 @@ cc.Class({
 
     getType: function () {
         var type = 0;
+
+        /*
         for (var i = 0; i < this._leixingxuanze.length; ++i) {
             if (this._leixingxuanze[i].checked) {
                 type = i;
                 break;
             }
         }
+        */
 
         var typename = "sjz";
 
@@ -132,29 +137,29 @@ cc.Class({
 
     constructSJZMJConf: function () {
         
+        /*
         var wanfaxuanze = this._currentGame.getChildByName('wanfaxuanze');
         var feng = wanfaxuanze.children[0].getComponent('CheckBox').checked  == true ? 1 : 0;
-        var qidui = wanfaxuanze.children[1].getComponent('CheckBox').checked  == true ? 1 : 0;
-        var qingyise = wanfaxuanze.children[2].getComponent('CheckBox').checked  == true ? 1 : 0;
+        //var qidui = wanfaxuanze.children[1].getComponent('CheckBox').checked  == true ? 1 : 0;
+        //var qingyise = wanfaxuanze.children[2].getComponent('CheckBox').checked  == true ? 1 : 0;
         var liuzhuang = wanfaxuanze.children[3].getComponent('CheckBox').checked  == true ? 1 : 0;
+        */
 
-        
-
+        var renshuxuanze = this.getSelectedOfRadioGroup('renshuxuanze');
+        var feng = this.getSelectedOfRadioGroup('wanfaxuanze');
+        var liuzhuang = this.getSelectedOfRadioGroup('liuzhuangxuanze');
         var kouzuan = this.getSelectedOfRadioGroup('kouzuan');
-        //var renshuxuanze = this.getSelectedOfRadioGroup('renshuxuanze');
-        var renshuxuanze = 1;
         var jushuxuanze = this.getSelectedOfRadioGroup('xuanzejushu');
-
         
 
         
         var conf = {
             kouzuan:kouzuan,
-            qidui:qidui,
+            qidui:1,
+            qingyise:1,
             feng:feng,
             renshuxuanze:renshuxuanze,
             jushuxuanze:jushuxuanze,
-            qingyise:qingyise,
             liuzhuang:liuzhuang,   
         };
         return conf;

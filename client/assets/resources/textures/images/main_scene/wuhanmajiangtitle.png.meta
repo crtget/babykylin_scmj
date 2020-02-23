@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "8e45ce0f-f765-402a-919c-117e49f9f406",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "wuhanmajiangtitle": {
+      "ver": "1.0.3",
+      "uuid": "7e3d97a5-b0d3-4338-8a80-9b1764f6f1ec",
+      "rawTextureUuid": "8e45ce0f-f765-402a-919c-117e49f9f406",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 318,
+      "height": 49,
+      "rawWidth": 318,
+      "rawHeight": 49,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

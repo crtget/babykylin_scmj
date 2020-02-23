@@ -162,6 +162,8 @@ app.get('/enter_room', function (req, res) {
 		return;
 	}
 
+
+
 	var md5 = crypto.md5(userId + name + roomId + config.ROOM_PRI_KEY);
 	console.log(req.query);
 	console.log(md5);

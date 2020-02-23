@@ -98,11 +98,11 @@ exports.createRoom = function (creator, roomConf, gems, ip, port, gametype, deal
 	if (
 
 		roomConf.jushuxuanze == null//局数选择
-		|| roomConf.feng == null //0不带风 1带风
+		|| roomConf.feng == null //0=不带风 1=带风
 		|| roomConf.qidui == null //七小对
 		|| roomConf.qingyise == null //清一色
-		|| roomConf.renshuxuanze == null //人数选择
-		|| roomConf.liuzhuang == null	// 1流局庄坐庄 0 流局下家坐庄	
+		|| roomConf.renshuxuanze == null //人数选择 0=3 1=4
+		|| roomConf.liuzhuang == null	//0=流局下家坐庄 1=流局庄坐庄 	
 		|| roomConf.kouzuan == null		//扣钻选择	 0 房主扣钻 1 每人扣钻
 		|| roomConf.dengtuibaozhuang == null //1蹬腿算包庄(听牌失败)  0 蹬腿不算包庄(听牌成功)
 		|| roomConf.baoting == null //是否需要报听  1报听后打出一张废牌系统自动出牌不可换牌  0不用报听可随意换牌
@@ -482,6 +482,10 @@ exports.enterRoom = function (roomId, userId, userName, gems, lucky, callback) {
 				return 3;
 			}
 		}
+
+
+
+	
 
 		for (var i = 0; i < roomInfo.conf.renshuxuanze; ++i) {
 			var seat = room.seats[i];

@@ -99,7 +99,7 @@ cc.Class({
     onBtnDownloadClicked:function(){
         cc.sys.openURL(cc.vv.SI.appweb);
     },
-    
+    /*
     showSplash:function(callback){
         var self = this;
         var SHOW_TIME = 3000;
@@ -136,7 +136,7 @@ cc.Class({
             callback();
         }
     },
-    
+    */
     getServerInfo:function(){
         var self = this;
         var onGetVersion = function(ret){

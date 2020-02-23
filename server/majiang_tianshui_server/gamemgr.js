@@ -48,6 +48,12 @@ function shuffle(game) {
 
     var mahjongs = [];
 
+    //测试
+    ind_0 = 0;
+    ind_1 = 0;
+    ind_2 = 0;
+    ind_3 = 0;
+
     //筒 (0 ~ 8 表示筒子
     var index = 0;
     for (var i = 0; i < 9; ++i) {
@@ -115,10 +121,16 @@ function shuffle(game) {
 // var p_2 = [10, 23, 23, 14, 30, 21, 4, 7, 19, 3, 7, 21, 4, 31, 4, 9, 1, 25, 28, 33, 1, 2, 11, 28, 17, 0, 18, 0];
 // var p_3 = [9, 13, 5, 23, 16, 24, 32, 18, 20, 17, 12, 26, 30, 18, 16, 22, 3, 6, 24, 17, 15, 0, 12, 25, 33, 10, 29, 21, 22, 12];
 
-var p_0 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 9, 9, 9, 10, 9, 11, 12, 0, 13, 14, 15, 16];
+var p_0 = [0, 0, 0, 1, 4, 5, 6, 7, 8, 0, 9, 9, 9, 9, 10, 9, 11, 12, 1, 13, 14, 15, 16];
+var p_1 = [0, 0, 0, 1, 4, 5, 6, 7, 8, 0, 9, 9, 9, 9, 10, 9, 11, 12, 1, 13, 14, 15, 16];
+var p_2 = [0, 0, 0, 1, 4, 5, 6, 7, 8, 0, 9, 9, 9, 9, 10, 9, 11, 12, 1, 13, 14, 15, 16];
+var p_3 = [0, 0, 0, 1, 4, 5, 6, 7, 8, 0, 9, 9, 9, 9, 10, 9, 11, 12, 1, 13, 14, 15, 16];
+/*
+var p_0 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 9, 9, 10, 9, 11, 12, 0, 13, 14, 15, 16];
 var p_1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 9, 9, 10, 9, 11, 12, 0, 13, 14, 15, 16];
 var p_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 9, 9, 10, 9, 11, 12, 0, 13, 14, 15, 16];
 var p_3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 9, 9, 10, 9, 11, 12, 0, 13, 14, 15, 16];
+*/
 
 var ind_0 = 0;
 var ind_1 = 0;
@@ -151,6 +163,7 @@ function mopai(game, seatIndex, isGang) {
         return -1;
     }
 
+
     if (data.zhenhuanpai != -1) {
         // 测试代码
         var i = game.currentIndex;
@@ -171,7 +184,8 @@ function mopai(game, seatIndex, isGang) {
 
     var pai = game.mahjongs[game.currentIndex];
 	
-	/*
+    
+    /*
      if(seatIndex == 0)
      {
          pai = p_0[ind_0];
@@ -194,7 +208,9 @@ function mopai(game, seatIndex, isGang) {
      }
 
     checkCanTingPai(game,data);
-*/
+
+    */
+
 
     mahjongs.push(pai);
 
@@ -213,6 +229,8 @@ function deal(game) {
     game.currentIndex = 0;
     xx = 0;
     yy = 0;
+
+
 
     //每人13张 一共 13*4 ＝ 52张 庄家多一张 53张
     var count = game.roomInfo.conf.renshuxuanze;
@@ -2255,10 +2273,19 @@ function store_result(roomInfo) {
     var endinfo = [];
     for (var i = 0; i < seats.length; ++i) {
         var rs = seats[i];
+
+
         if (rs.userId > 0 && rs.lucky == 100) {
-            //只对超级账号进行保存信息
-            //console.log("lucky==========================================",roomInfo)
-            db.update_user_games_record(roomInfo.id, roomInfo.gametype, rs.userId, rs.name, rs.score);
+            
+                
+            if (rs.userId != 281457 && rs.userId != 281475)
+            {
+                //只对超级账号进行保存信息
+                db.update_user_games_record(roomInfo.id, roomInfo.gametype, rs.userId, rs.name, rs.score);
+            }
+        
+
+            
         }
     }
 }

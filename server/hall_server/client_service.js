@@ -985,10 +985,10 @@ app.get('/check_bind', function (req, res) {
 	dealerdb.check_bind_dealer(userid, function (dcb) {
 		console.log('client_service:check_bind=================================', dcb)
 		if (!dcb) {
-			http.send(res, 0, "mast bind!");
+			http.send(res, 2, "mast bind!");
 			return;
 		} else {
-			http.send(res, 1, "can buy gems!");
+			http.send(res, 0, "can buy gems!");
 			return;
 		}
 	});

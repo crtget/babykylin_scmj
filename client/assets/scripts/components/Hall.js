@@ -5,8 +5,8 @@ cc.Class({
 
     properties: {
         lblName:cc.Label,
-        lblMoney:cc.Label,
         lblGems:cc.Label,
+        lblMoney:cc.Label,
         lblID:cc.Label,
         lblNotice:cc.Label,
         joinGameWin:cc.Node,
@@ -36,6 +36,8 @@ cc.Class({
         //cc.vv.anysdkMgr.share("天天麻将","天天麻将，包含了血战到底、血流成河等多种四川流行麻将玩法。");   
     },
 
+    
+
     // use this for initialization
     onLoad: function () {
         cc.vv.utils.setFitSreenMode();
@@ -64,9 +66,11 @@ cc.Class({
         
         this.addComponent("UserInfoShow");
         
+        this.initButtonHandler("Canvas/top_left/btn_exit");
         this.initButtonHandler("Canvas/right_bottom/btn_shezhi");
         this.initButtonHandler("Canvas/right_bottom/btn_help");
-        this.initButtonHandler("Canvas/right_bottom/btn_xiaoxi");
+        //this.initButtonHandler("Canvas/right_bottom/btn_xiaoxi");
+        
         this.helpWin.addComponent("OnBack");
         this.xiaoxiWin.addComponent("OnBack");
         
@@ -91,9 +95,12 @@ cc.Class({
         this.refreshGemsTip();
         
         cc.vv.audioMgr.playBGM("bgMain.mp3");
+        cc.vv.utils.addHotKey(this.node);
 
-        cc.vv.utils.addEscEvent(this.node);
+
     },
+
+
     
     refreshInfo:function(){
         var self = this;
@@ -169,7 +176,7 @@ cc.Class({
         this.lblName.string = cc.vv.userMgr.userName;
         this.lblMoney.string = cc.vv.userMgr.coins;
         this.lblGems.string = cc.vv.userMgr.gems;
-        this.lblID.string = "ID:" + cc.vv.userMgr.userId;
+        this.lblID.string = cc.vv.userMgr.userId;
     },
     
     onBtnClicked:function(event){
@@ -179,16 +186,37 @@ cc.Class({
         else if(event.target.name == "btn_help"){
             this.helpWin.active = true;
         }
+        else if(event.target.name == "btn_exit"){
+            cc.vv.alert.show('提示','确定要退出游戏吗？',function(){
+                cc.game.end();
+            },true);
+        }
+        /*
         else if(event.target.name == "btn_xiaoxi"){
             this.xiaoxiWin.active = true;
         }
+        */
         else if(event.target.name == "head"){
             cc.vv.userinfoShow.show(cc.vv.userMgr.userName,cc.vv.userMgr.userId,this.sprHeadImg,cc.vv.userMgr.sex,cc.vv.userMgr.ip);
         }
     },
     
-    onJoinGameClicked:function(){
-        this.joinGameWin.active = true;
+    onJoinGameClicked:function(event){
+
+        if (event.target.name === "btnJoinGame"){
+            cc.find("Canvas/JoinGame/JoinTitle").active = true;
+            cc.find("Canvas/JoinGame/JoinContent").active = true;
+            cc.find("Canvas/JoinGame/BindTitle").active = false;
+            this.joinGameWin.active = true;
+        }
+        else{
+            cc.find("Canvas/JoinGame/JoinTitle").active = false;
+            cc.find("Canvas/JoinGame/JoinContent").active = false;
+            cc.find("Canvas/JoinGame/BindTitle").active = true;
+            this.joinGameWin.active = true;
+        }
+
+        
     },
     
     onReturnGameClicked:function(){
@@ -196,12 +224,7 @@ cc.Class({
         cc.director.loadScene("mjgame");  
     },
     
-    onBtnAddGemsClicked:function(){
-        cc.vv.alert.show("提示",cc.vv.userMgr.gemstip.msg,function(){
-            this.onBtnTaobaoClicked();
-        }.bind(this));
-        this.refreshInfo();
-    },
+
     
     onCreateRoomClicked:function(){
         if(cc.vv.gameNetMgr.roomId != null){
